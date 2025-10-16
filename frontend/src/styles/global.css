@@ -1,0 +1,129 @@
+/* global.css - Main colors, font, and reusable elements */
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* CSS Variables for Colors */
+:root {
+    /* Primary Colors */
+    --color-primary: #667eea;
+    --color-primary-dark: #764ba2;
+    --color-accent: #FFD93D;
+
+    /* Neutral Colors */
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-gray-dark: #1f2937;
+    --color-gray: #4B5563;
+    --color-gray-medium: #6b7280;
+    --color-gray-light: #9ca3af;
+    --color-gray-lighter: #e5e7eb;
+    --color-gray-lightest: #f3f4f6;
+    --color-background: #f9fafb;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    --gradient-dark: linear-gradient(135deg, var(--color-gray-dark) 0%, #111827 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 12px 24px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 20px 40px rgba(102, 126, 234, 0.15);
+
+    /* Transitions */
+    --transition-base: all 0.3s ease;
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    color: var(--color-gray-dark);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--color-gray-dark);
+}
+
+p {
+    color: var(--color-gray-medium);
+    line-height: 1.7;
+}
+
+/* Reusable Button Styles */
+.btn-primary {
+    background: var(--gradient-primary);
+    color: var(--color-white);
+    border: none;
+    padding: 16px 40px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: var(--transition-base);
+}
+
+.btn-primary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(102, 126, 234, 0.4);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    padding: 16px 40px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: var(--transition-base);
+}
+
+.btn-secondary:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+.btn-secondary-dark {
+    background: transparent;
+    color: var(--color-white);
+    border: 2px solid var(--color-white);
+    padding: 16px 40px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: var(--transition-base);
+}
+
+.btn-secondary-dark:hover {
+    background: var(--color-white);
+    color: var(--color-gray-dark);
+}
+
+/* Highlight Text */
+.highlight {
+    background: linear-gradient(120deg, var(--color-accent) 0%, #ffed4e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
